@@ -94,10 +94,12 @@ function run() {
     Promise.all(team.map((object) => getData(object)))
       .then((results) => {
         results.forEach((player) => {
+          console.log("player", player);
+          console.log("results", results);
           let curScore =
             player.Response.metrics.data.metrics[2330926603].objectiveProgress
               .progress;
-          console.log(`${player} = ${curScore}`);
+          //console.log(`${player} = ${curScore}`);
           score = score + curScore;
         });
         scoreDisplay.innerHTML = score;

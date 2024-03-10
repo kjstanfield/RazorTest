@@ -82,9 +82,6 @@ function run() {
       if (!response.ok) {
         throw new Error(`Failed to fetch data for object with ID ${object.id}`);
       }
-      console.log(object.name);
-      let r = response.json();
-      console.log(r);
       return response.json();
     });
   }
@@ -96,6 +93,7 @@ function run() {
 
     Promise.all(team.map((object) => getData(object)))
       .then((results) => {
+        console.log("Test Res", results);
         results.forEach((player) => {
           let curScore =
             player.Response.metrics.data.metrics[2330926603].objectiveProgress

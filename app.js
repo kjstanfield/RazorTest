@@ -91,9 +91,13 @@ function run() {
     let currentTeam = `team${count}`;
     let scoreDisplay = document.getElementById(currentTeam);
 
-    Promise.all(team.map((object) => getData(object)))
+    Promise.all(
+      team.map((object) => {
+        getData(object);
+        console.log(object);
+      })
+    )
       .then((results) => {
-        console.log("Test Res", results);
         results.forEach((player) => {
           let curScore =
             player.Response.metrics.data.metrics[2330926603].objectiveProgress

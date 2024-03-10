@@ -1,0 +1,57 @@
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #181818;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.hidden {
+    display: none;
+}
+
+#scores {
+    font-size: 2rem;
+    padding-top: 1.5rem;
+}
+
+.main {
+    padding: .2rem;
+}
+
+.score {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.t1 {
+    color: #01befe;
+}
+
+.t2 {
+    color: #ffdd00
+}
+
+.t3 {
+    color: #ff7d00;
+}
+
+.t4 {
+    color: #ff006d;
+}
+
+.t5 {
+    color: #adff02;
+}
+
+.t6 {
+    color: #8f00ff;
+}

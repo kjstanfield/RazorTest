@@ -93,13 +93,13 @@ function run() {
 
     Promise.all(team.map((object) => getData(object)))
       .then((results) => {
-        console.log("Test Res", results);
-        results.forEach((player) => {
+        console.log("-------------");
+        results.forEach((player, i) => {
           let curScore =
             player.Response.metrics.data.metrics[2330926603].objectiveProgress
               .progress;
-          console.log(score);
           score = score + curScore;
+          console.log(`${i} -> ${score}`);
         });
         scoreDisplay.innerHTML = score;
       })

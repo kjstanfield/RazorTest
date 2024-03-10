@@ -97,7 +97,7 @@ function run() {
           let curScore =
             player.Response.metrics.data.metrics[2330926603].objectiveProgress
               .progress;
-          console.log(`${player.name} = ${curScore}`);
+          console.log(`${player} = ${curScore}`);
           score = score + curScore;
         });
         scoreDisplay.innerHTML = score;

@@ -101,7 +101,7 @@ function run() {
           score = score + curScore;
           // console.log("Results", results);
           // console.log("Player", player);
-          console.log(`${i + 1} -> ${score}`);
+          console.log(`${i + 1} -> ${curScore}`);
         });
         scoreDisplay.innerHTML = score;
       })

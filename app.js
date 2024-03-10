@@ -82,18 +82,14 @@ function run() {
       if (!response.ok) {
         throw new Error(`Failed to fetch data for object with ID ${object.id}`);
       }
-      console.log(
-        `Player: ${object.name} = Score: ${
-          response.json().player.Response.metrics.data.metrics[2330926603]
-            .objectiveProgress.progress
-        }`
-      );
       return response.json();
     });
   }
 
-  function getScores(team) {
+  function getScores(team, count) {
     let score = 0;
+    let currentTeam = `team${count}`;
+    let scoreDisplay = document.getElementById(currentTeam);
 
     Promise.all(team.map((object) => getData(object)))
       .then((results) => {
@@ -104,7 +100,7 @@ function run() {
               player.Response.metrics.data.metrics[2330926603].objectiveProgress
                 .progress)
         );
-        return score;
+        scoreDisplay.innerHTML = score;
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -112,9 +108,6 @@ function run() {
   }
 
   allTeams.forEach((team, i) => {
-    let currentTeam = `team${i + 1}`;
-    let scoreDisplay = document.getElementById(currentTeam);
-    let currentScore = getScores(team);
-    scoreDisplay.innerHTML = currentScore;
+    getScores(team, `${i + 1}`);
   });
 }

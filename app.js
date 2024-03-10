@@ -82,8 +82,8 @@ function run() {
       if (!response.ok) {
         throw new Error(`Failed to fetch data for object with ID ${object.id}`);
       }
-      console.log("response", response.json);
-      console.log("object", object.name);
+      console.log(object.name);
+      console.log("response", response);
       return response.json();
     });
   }

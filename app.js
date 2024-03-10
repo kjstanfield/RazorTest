@@ -80,7 +80,7 @@ function run() {
 
     return fetch(apiUrl, requestOptions).then((response) => {
       if (!response.ok) {
-        throw new Error(`Failed to fetch data for object with ID ${object.id}`);
+        throw new Error(`Failed to fetch data for ${object.name}`);
       }
       return response.json();
     });
@@ -91,17 +91,14 @@ function run() {
     let currentTeam = `team${count}`;
     let scoreDisplay = document.getElementById(currentTeam);
 
-    Promise.all(
-      team.map((object) => {
-        getData(object);
-        console.log(object);
-      })
-    )
+    Promise.all(team.map((object) => getData(object)))
       .then((results) => {
+        console.log("Test Res", results);
         results.forEach((player) => {
           let curScore =
             player.Response.metrics.data.metrics[2330926603].objectiveProgress
               .progress;
+          console.log(score);
           score = score + curScore;
         });
         scoreDisplay.innerHTML = score;

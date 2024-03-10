@@ -82,6 +82,12 @@ function run() {
       if (!response.ok) {
         throw new Error(`Failed to fetch data for object with ID ${object.id}`);
       }
+      console.log(
+        `${object.name} = ${
+          response.json().Response.metrics.data.metrics[2330926603]
+            .objectiveProgress.progress
+        }`
+      );
       return response.json();
     });
   }

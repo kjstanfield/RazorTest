@@ -99,9 +99,7 @@ function run() {
             player.Response.metrics.data.metrics[2330926603].objectiveProgress
               .progress;
           score = score + curScore;
-          console.log(team);
-          console.log(team[i]);
-          console.log(`${i + 1} -> ${curScore}`);
+          console.log(`${team[i].name} -> ${curScore}`);
         });
         scoreDisplay.innerHTML = score;
       })

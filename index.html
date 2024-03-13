@@ -20,24 +20,40 @@
         <button onclick="run()">Submit</button>
       </div>
       <div id="scores">
-        <div class="main t1">
-          Team 1 Score: <span id="team1" class="score">-</span>
-        </div>
-        <div class="main t2">
-          Team 2 Score: <span id="team2" class="score">-</span>
-        </div>
-        <div class="main t3">
-          Team 3 Score: <span id="team3" class="score">-</span>
-        </div>
-        <div class="main t4">
-          Team 4 Score: <span id="team4" class="score">-</span>
-        </div>
-        <div class="main t5">
-          Team 5 Score: <span id="team5" class="score">-</span>
-        </div>
-        <div class="main t6">
-          Team 6 Score: <span id="team6" class="score">-</span>
-        </div>
+        <table id="scoreTable">
+          <tr>
+            <th class="header">Team</th>
+            <th class="header">Total Score</th>
+          </tr>
+          <tr>
+            <td class="t1 c1">Popcorn</td>
+            <td><span id="team1" class="t1 score">-</span></td>
+          </tr>
+          <tr>
+            <td class="t2 c1">Ursidae</td>
+            <td><span id="team2" class="t2 score">-</span></td>
+          </tr>
+          <tr>
+            <td class="t3 c1">Band of Heathens</td>
+            <td><span id="team3" class="t3 score">-</span></td>
+          </tr>
+          <tr>
+            <td class="t4 c1">'Winners' of 2024</td>
+            <td><span id="team4" class="t4 score">-</span></td>
+          </tr>
+          <tr>
+            <td class="t5 c1">Limitless</td>
+            <td><span id="team5" class="t5 score">-</span></td>
+          </tr>
+          <tr>
+            <td class="t6 c1">Deep</td>
+            <td><span id="team6" class="t6 score">-</span></td>
+          </tr>
+          <tr>
+            <td class="t7 c1">Nerds Inc.</td>
+            <td><span id="team7" class="t7 score">-</span></td>
+          </tr>
+        </table>
       </div>
     </div>
   </body>

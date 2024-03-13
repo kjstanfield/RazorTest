@@ -60,7 +60,7 @@ const allTeams = [
 
 function sortTable() {
   var table, rows, switching, i, x, y, shouldSwitch;
-  table = document.getElementById("scoreTable");
+  table = document.getElementById("score-table");
   switching = true;
 
   while (switching) {

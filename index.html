@@ -19,39 +19,47 @@
         <input type="text" id="key" name="key" />
         <button onclick="run()">Submit</button>
       </div>
-      <div id="scores">
-        <table id="scoreTable">
+      <div id="score-wrapper">
+        <table id="score-table">
           <tr>
-            <th class="header">Team</th>
-            <th class="header">Total Score</th>
+            <th id="h-team" class="header">Team</th>
+            <th id="h-score" class="header">Score</th>
+            <th id="h-today" class="header">Today</th>
           </tr>
           <tr>
-            <td class="t1 c1">Popcorn</td>
-            <td><span id="team1" class="t1 score">-</span></td>
+            <td class="t1">Popcorn</td>
+            <td class="center"><span id="team1" class="t1 score">-</span></td>
+            <td class="center"><span id="team1d" class="t1 score">-</span></td>
           </tr>
           <tr>
-            <td class="t2 c1">Ursidae</td>
-            <td><span id="team2" class="t2 score">-</span></td>
+            <td class="t2">Ursidae</td>
+            <td class="center"><span id="team2" class="t2 score">-</span></td>
+            <td class="center"><span id="team2d" class="t2 score">-</span></td>
           </tr>
           <tr>
-            <td class="t3 c1">Band of Heathens</td>
-            <td><span id="team3" class="t3 score">-</span></td>
+            <td class="t3">Band of Heathens</td>
+            <td class="center"><span id="team3" class="t3 score">-</span></td>
+            <td class="center"><span id="team3d" class="t3 score">-</span></td>
           </tr>
           <tr>
-            <td class="t4 c1">'Winners' of 2024</td>
-            <td><span id="team4" class="t4 score">-</span></td>
+            <td class="t4">'Winners' of 2024</td>
+            <td class="center"><span id="team4" class="t4 score">-</span></td>
+            <td class="center"><span id="team4d" class="t4 score">-</span></td>
           </tr>
           <tr>
-            <td class="t5 c1">Limitless</td>
-            <td><span id="team5" class="t5 score">-</span></td>
+            <td class="t5">Limitless</td>
+            <td class="center"><span id="team5" class="t5 score">-</span></td>
+            <td class="center"><span id="team5d" class="t5 score">-</span></td>
           </tr>
           <tr>
-            <td class="t6 c1">Deep</td>
-            <td><span id="team6" class="t6 score">-</span></td>
+            <td class="t6">Deep</td>
+            <td class="center"><span id="team6" class="t6 score">-</span></td>
+            <td class="center"><span id="team6d" class="t6 score">-</span></td>
           </tr>
           <tr>
-            <td class="t7 c1">Nerds Inc.</td>
-            <td><span id="team7" class="t7 score">-</span></td>
+            <td class="t7">Nerds Inc.</td>
+            <td class="center"><span id="team7" class="t7 score">-</span></td>
+            <td class="center"><span id="team7d" class="t7 score">-</span></td>
           </tr>
         </table>
       </div>

@@ -120,7 +120,9 @@ function run() {
     let score = 0;
     let daily = 0;
     let currentTeam = `team${count}`;
+    let currentDaily = `team${count}d`;
     let scoreDisplay = document.getElementById(currentTeam);
+    let dailyDisplay = document.getElementById(currentDaily);
 
     Promise.all(team.map((object) => getData(object)))
       .then((results) => {
@@ -140,6 +142,7 @@ function run() {
           console.log(`${team[i].name} -> ${curScore} | ${dailyScore}`);
         });
         scoreDisplay.innerHTML = score;
+        dailyDisplay.innerHTML = daily;
         sortTable();
       })
       .catch((error) => {

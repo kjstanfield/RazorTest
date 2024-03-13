@@ -9,15 +9,31 @@ body {
 }
 
 .wrapper {
-    width: 90%;
+    width: 80%;
     margin: 2rem auto;
 }
+
+#score-table {
+    width: 100%
+}
+
+@media screen and (min-width: 930px) {
+    #score-table {
+        width: 80%
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    #score-table {
+        width: 70%
+    }
+  }
 
 .hidden {
     display: none;
 }
 
-#scores {
+#score-wrapper {
     font-size: 2rem;
     padding-top: 1.5rem;
 }
@@ -31,8 +47,21 @@ body {
     font-weight: 700;
 }
 
-.c1 {
-    padding-right: 3.5rem;
+#h-team {
+    width: 45%;
+    text-align: left;
+}
+
+#h-score {
+    width: 27.5%
+}
+
+#h-today {
+    width: 27.5%
+}
+
+.center {
+    text-align: center;
 }
 
 .t1 {

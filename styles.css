@@ -65,29 +65,33 @@ body {
 }
 
 .t1 {
-    color: #01befe;
+    color: #42FF2D;
 }
 
 .t2 {
-    color: #ffdd00
+    color: #49DB3E
 }
 
 .t3 {
-    color: #ff7d00;
+    color: #50B64F;
 }
 
 .t4 {
-    color: #ff006d;
+    color: #579260;
 }
 
 .t5 {
-    color: #adff02;
+    color: #5D6D70;
 }
 
 .t6 {
-    color: #8f00ff;
+    color: #644981;
 }
 
 .t7 {
-    color: #FFB6C1;
+    color: #6B2492;
+}
+
+.t8 {
+    color: #7200A3;
 }

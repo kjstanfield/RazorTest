@@ -5,7 +5,7 @@ const allTeams = [
     { type: "3", id: "4611686018482605597", name: "Butters" },
     { type: "1", id: "4611686018456289666", name: "Frzn" },
     { type: "3", id: "4611686018472105534", name: "Razorcut" },
-    { type: "3", id: "4611686018468117711", name: "Ksetcs" },
+    { type: "3", id: "4611686018468117711", name: "Kstecs" },
     { type: "3", id: "4611686018504800722", name: "Apple_64" },
     { type: "1", id: "4611686018430872228", name: "Reopss" },
   ],
@@ -56,6 +56,12 @@ const allTeams = [
     { type: "1", id: "4611686018444819810", name: "Arb" },
     { type: "1", id: "4611686018444807257", name: "Chief" },
   ],
+  [
+    { type: "2", id: "4611686018467231895", name: "Star" },
+    { type: "2", id: "4611686018452198767", name: "Wolfy" },
+    { type: "2", id: "4611686018457261703", name: "Percs2F" },
+    { type: "1", id: "4611686018433914238", name: "Arladouc" },
+  ],
 ];
 
 function sortTable() {
@@ -80,17 +86,26 @@ function sortTable() {
       switching = true;
     }
   }
+  gradient();
+}
+
+function gradient() {
+  let rows = document.getElementsByClassName("row");
+
+  for (i = 0; i < rows.length; i++) {
+    rows[i].classList.add(`t${i + 1}`);
+  }
 }
 
 function run() {
   let input = document.getElementById("key");
-  console.log(`NEW RUN`);
-  console.log(``);
 
   if (input.value == null || input.value == "") {
     console.log("No Key");
     return;
   }
+  console.log(`NEW RUN`);
+  console.log(``);
 
   input.classList.add("hidden");
   let loadedScores = document.getElementsByClassName("score");
@@ -132,14 +147,26 @@ function run() {
             player.Response.metrics.data.metrics[2330926603].objectiveProgress
               .progress;
 
-          let dailyScore =
+          let dailyScore1 =
             player.Response.metrics.data.metrics[2871558814].objectiveProgress
               .progress;
 
-          score = score + curScore;
-          daily = daily + dailyScore;
+          let dailyScore2 =
+            player.Response.metrics.data.metrics[3290789770].objectiveProgress
+              .progress;
 
-          console.log(`${team[i].name} -> ${curScore} | ${dailyScore}`);
+          let dailyScore3 =
+            player.Response.metrics.data.metrics[3738124663].objectiveProgress
+              .progress;
+
+          score = score + curScore;
+          daily = daily + dailyScore1 + dailyScore2 + dailyScore3;
+
+          console.log(
+            `${team[i].name} -> ${curScore} | ${
+              dailyScore1 + dailyScore2 + dailyScore3
+            }`
+          );
         });
         scoreDisplay.innerHTML = score;
         dailyDisplay.innerHTML = daily;

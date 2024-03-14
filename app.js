@@ -86,7 +86,6 @@ function sortTable() {
       switching = true;
     }
   }
-  gradient();
 }
 
 function gradient() {
@@ -171,6 +170,7 @@ function run() {
         scoreDisplay.innerHTML = score;
         dailyDisplay.innerHTML = daily;
         sortTable();
+        gradient();
       })
       .catch((error) => {
         console.error("Error:", error);

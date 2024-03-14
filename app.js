@@ -92,8 +92,11 @@ function gradient() {
   let rows = document.getElementsByClassName("row");
 
   for (i = 0; i < rows.length; i++) {
+    rows[i].className = "row";
     rows[i].classList.add(`t${i + 1}`);
   }
+
+  console.log("RAN");
 }
 
 function run() {

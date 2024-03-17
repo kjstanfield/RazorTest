@@ -95,8 +95,6 @@ function gradient() {
     rows[i].className = "row";
     rows[i].classList.add(`t${i + 1}`);
   }
-
-  console.log("RAN");
 }
 
 function run() {
@@ -138,12 +136,40 @@ function run() {
     let daily = 0;
     let currentTeam = `team${count}`;
     let currentDaily = `team${count}d`;
+    let teamName = "";
     let scoreDisplay = document.getElementById(currentTeam);
     let dailyDisplay = document.getElementById(currentDaily);
 
+    switch (count) {
+      case 1:
+        teamName = "Popcorn";
+        break;
+      case 2:
+        teamName = "Ursidae";
+        break;
+      case 3:
+        teamName = "Band of Heathens";
+        break;
+      case 4:
+        teamName = "Winners of 2024";
+        break;
+      case 5:
+        teamName = "Limitless";
+        break;
+      case 6:
+        teamName = "Deep";
+        break;
+      case 7:
+        teamName = "Nerds Inc.";
+        break;
+      case 8:
+        teamName = "Rosery";
+        break;
+    }
+
     Promise.all(team.map((object) => getData(object)))
       .then((results) => {
-        console.log(`------ ${currentTeam} ------`);
+        console.log(`------ ${teamName} ------`);
         results.forEach((player, i) => {
           let curScore =
             player.Response.metrics.data.metrics[2330926603].objectiveProgress

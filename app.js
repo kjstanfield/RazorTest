@@ -141,28 +141,28 @@ function run() {
     let dailyDisplay = document.getElementById(currentDaily);
 
     switch (count) {
-      case 1:
+      case "1":
         teamName = "Popcorn";
         break;
-      case 2:
+      case "2":
         teamName = "Ursidae";
         break;
-      case 3:
+      case "3":
         teamName = "Band of Heathens";
         break;
-      case 4:
+      case "4":
         teamName = "Winners of 2024";
         break;
-      case 5:
+      case "5":
         teamName = "Limitless";
         break;
-      case 6:
+      case "6":
         teamName = "Deep";
         break;
-      case 7:
+      case "7":
         teamName = "Nerds Inc.";
         break;
-      case 8:
+      case "8":
         teamName = "Rosery";
         break;
     }
